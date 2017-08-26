@@ -14,6 +14,8 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     fontSize: 48,
+    boxShadow: '0px 0px 10px 4px black inset',
+
   },
   description: {
     bottom: 0,
@@ -33,7 +35,6 @@ const styles = {
     marginLeft: '10%',
     marginRight: '10%',
     background: 'linear-gradient(rgb(40,40,40),rgb(20,20,20))',
-    boxShadow: '0px 0px 1px 1px black inset',
   },
   paragraph: {
     fontSize: 18,
@@ -43,7 +44,6 @@ const styles = {
     margin: 24,
     boxShadow: '0px 0px 4px 1px rgba(0, 0, 0, 0) inset',
     fontFamily: 'Courier',
-    textShadow: '0px 8px 4px black',
   },
   subtitle: {
     fontSize: 16,
@@ -75,10 +75,10 @@ const Introduction = () => (
           Rapid Prototyping.
         </div>
         <div style={styles.paragraph}>
-          Freedom in electronics.
+          Electronic Playground
         </div>
         <div style={styles.paragraph}>
-          No big brother.
+          No Big Brother
         </div>
       </div>
     </div>

@@ -21,7 +21,7 @@ const styles = {
     boxShadow: '0 0 13px 1px rgb(30,30,30) inset',
     padding: 2,
     paddingLeft: 20,
-    paddingEight: 15,
+    paddingRight: 15,
     marginLeft: 30,
     left: 0,
     display: 'flex',
