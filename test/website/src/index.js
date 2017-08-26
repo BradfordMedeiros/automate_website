@@ -5,7 +5,7 @@ import Layout from './BasicLayout/Layout';
 import Introduction from './Introduction';
 import Tutorials from './Tutorials';
 import Downloads from './Downloads';
-import GettingStarted from './GettingStarted';
+import FAQ from './FAQ/FAQ';
 import './style.css';
 
 const App = () => (
@@ -15,9 +15,11 @@ const App = () => (
         <Introduction/>
       </Layout>
     )} />
-    <Route path="/getting_started" component={GettingStarted}/>
+    <Route path="/getting_started" component={() => <div>todo</div>}/>
     <Route path="/tutorials" component={Tutorials}/>
     <Route path="/download" component={Downloads}/>
+    <Route path="/faqs" component={FAQ}/>
+
 
   </Router>
 );

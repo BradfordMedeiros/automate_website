@@ -1,0 +1,23 @@
+.expanded_started{
+    background: #191818;
+    padding: 64px;
+    margin-left: 128px;
+    margin-right: 10px;
+    border: 1px solid #373737;
+    opacity: 0.9;
+    animation: slide_in 0.2s forwards;
+    font-size: 22px;
+    font-family: Courier;
+}
+
+@keyframes slide_in {
+    from {
+        opacity: 0;
+        margin-left: 0;
+    }
+    to {
+        opacity: 0.9;
+        margin-left: 128px;
+
+    }
+}

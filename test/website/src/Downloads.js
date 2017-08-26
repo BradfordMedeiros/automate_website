@@ -3,7 +3,7 @@ import Layout from './BasicLayout/Layout';
 
 const Downloads = () => (
   <Layout>
-    downloads
+    <div>Download</div>
   </Layout>
 );
 

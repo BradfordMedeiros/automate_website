@@ -11,7 +11,7 @@ const styles = {
     position: 'absolute',
     width: '100%',
     height: 48,
-    //minWidth: 700,
+    minWidth: 700,
   },
   title: {
     color: 'grey',
@@ -39,7 +39,7 @@ const styles = {
     flexDirection: 'row',
     position: 'absolute',
     width: '80%',
-    left: '20%',
+    left: 180,
     height: '100%',
     alignItems: 'center',
     border: '1px solid rgba(0, 0, 0, 0.5)',
@@ -57,7 +57,7 @@ const styles = {
 
 
 const BasicLayout = ({ children} ) => (
-  <div style={{ width: '100vw', height: '100vh', background: 'red' }}>
+  <div style={{ width: '100vw', height: '100vh' }}>
     <div style={styles.appbarStyle} id="appbar">
       <div style={styles.title}>automate</div>
       <div style={styles.menuStyle}>
@@ -65,6 +65,8 @@ const BasicLayout = ({ children} ) => (
         <div onClick={() => browserHistory.push('/getting_started')} className="menu_item" href="getting_started/index.html">Getting started</div>
         <div onClick={() => browserHistory.push('/download')} className="menu_item">Download</div>
         <div onClick={() => browserHistory.push('/tutorials')} className="menu_item tutorial">Tutorials</div>
+        <div onClick={() => browserHistory.push('/faqs')} className="menu_item tutorial">FAQs</div>
+
       </div>
     </div>
     <div style={styles.childContainer}>
