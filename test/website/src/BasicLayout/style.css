@@ -1,0 +1,14 @@
+
+a:link {
+    text-decoration: none;
+}
+.menu_item {
+    padding-left: 24px;
+    padding-right: 32px;
+    color: rgb(180,180,180);
+    cursor: pointer;
+}
+
+.menu_item:hover {
+    color: rgb(210,210,210);
+}
