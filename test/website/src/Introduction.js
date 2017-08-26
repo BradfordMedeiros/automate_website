@@ -35,6 +35,7 @@ const styles = {
     marginLeft: '10%',
     marginRight: '10%',
     background: 'linear-gradient(rgb(40,40,40),rgb(20,20,20))',
+    boxShadow: '0px 0px 2px 2px black inset',
   },
   paragraph: {
     fontSize: 18,
@@ -44,6 +45,7 @@ const styles = {
     margin: 24,
     boxShadow: '0px 0px 4px 1px rgba(0, 0, 0, 0) inset',
     fontFamily: 'Courier',
+    textShadow: '0px 8px 4px black',
   },
   subtitle: {
     fontSize: 16,
