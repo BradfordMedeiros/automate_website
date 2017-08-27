@@ -84,21 +84,6 @@ const Introduction = () => (
         </div>
       </div>
     </div>
-    {/*<div style={styles.automate_pic}>
-      automate
-      <div id="subtitle">home automation for electronics</div>
-    </div>
-    <div class="text">
-      <div class="paragraph">
-        Rapid Prototyping.
-      </div>
-      <div class="paragraph">
-        Freedom in electronics.
-      </div>
-      <div class="paragraph">
-        No big brother.
-      </div>
-    </div>*/}
   </div>
 );
 

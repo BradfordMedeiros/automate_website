@@ -1,29 +1,15 @@
 import React, { Component } from 'react';
 import Layout from '../BasicLayout/Layout';
+import Header from '../common/Header';
 import './style.css';
 
 const styles = {
   page: {
-    background: 'linear-gradient(rgb(20, 20, 20), rgb(16, 16, 16))',
     height: '100%',
     width: '100%',
     position: 'absolute',
-    padding: 64,
-    paddingTop: 12,
-    boxShadow: '0px 0px 10px 4px black inset',
+
     overflow: 'auto',
-  },
-  header: {
-    fontSize: 24,
-    margin: 12,
-    fontFamily: 'Courier',
-    boxShadow: '0px 0px 4px 1px black inset',
-    padding: 48,
-    paddingBottom: 24,
-    border: '1px solid #373737',
-    marginTop: 48,
-    marginBottom: 0,
-    cursor: 'pointer',
   },
 };
 
@@ -70,11 +56,10 @@ class FAQ extends Component {
   }
   render() {
     return (
-      <Layout>
+      <Layout padded>
         <div style={styles.page}>
           {Object.keys(titleContentMapping).map((question, expandedIndex) => (
-            [<div
-              style={styles.header}
+            [<Header
               onClick={() => {
                 if (this.state.expandedIndex === expandedIndex){
                   this.setState({
@@ -88,7 +73,7 @@ class FAQ extends Component {
               }}
             >
               {question}
-            </div>,
+            </Header>,
               (this.state.expandedIndex === expandedIndex) && (<div className="expanded_started">{titleContentMapping[question]}</div>)
             ]
           ))}
