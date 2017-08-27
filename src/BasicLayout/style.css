@@ -12,3 +12,13 @@ a:link {
 .menu_item:hover {
     color: rgb(210,210,210);
 }
+
+@keyframes fade_in {
+    from {
+        opacity: 0.6;
+    }
+    to{
+        opacity: 1;
+    }
+}
+

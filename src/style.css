@@ -16,3 +16,26 @@ body {
     height: 100vh;
     background: black;
 }
+
+::-webkit-scrollbar{
+    background: orange;
+    width: 8px;
+}
+::-webkit-scrollbar-button       {
+}
+::-webkit-scrollbar-track        {
+    background: green;
+}
+::-webkit-scrollbar-track-piece  {
+    background: black;
+    border: 1px solid grey;
+}
+::-webkit-scrollbar-thumb        {
+    background: darkslategrey;
+}
+::-webkit-scrollbar-corner       {
+    background: grey;
+}
+::-webkit-resizer                {
+    background: yellow;
+}

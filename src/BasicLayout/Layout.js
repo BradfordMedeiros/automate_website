@@ -51,14 +51,15 @@ const styles = {
     position: 'absolute',
     background: 'linear-gradient(rgb(20, 20, 20), rgb(16, 16, 16))',
     boxShadow: '0px 0px 10px 4px black inset',
+    animation: 'fade_in 0.2s linear forwards',
+    overflow: 'hidden',
   }
-
 };
 
 
 
 const BasicLayout = ({ children, padded } ) => {
-  const injectStyle = { padding: 64, paddingTop: 12, marginBottom: 32 };
+  const injectStyle = { padding: 64, paddingTop: 0, marginBottom: 32 };
   const childStyle = padded ? {...styles.childContainer, ...injectStyle} : styles.childContainer;
   return (
     <div style={{ width: '100vw', height: '100vh' }}>
@@ -73,7 +74,17 @@ const BasicLayout = ({ children, padded } ) => {
         </div>
       </div>
       <div  style={childStyle}>
-        {children}
+        <div style={{
+          bottom: 0,
+          position: 'absolute',
+          top: 0,
+          margin: padded  ? 48: undefined,
+          marginTop: 0,
+          left: padded ? 0: undefined,
+          right: padded ? 0: undefined,
+        }}>
+          {children}
+        </div>
       </div>
     </div>
   )

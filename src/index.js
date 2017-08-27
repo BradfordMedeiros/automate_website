@@ -12,7 +12,7 @@ import './style.css';
 const App = () => (
   <Router history={browserHistory}>
     <Route  path="/" component={() => (
-      <Layout>
+      <Layout padded>
         <Introduction/>
       </Layout>
     )} />
