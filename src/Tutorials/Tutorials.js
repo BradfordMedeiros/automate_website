@@ -5,21 +5,27 @@ import { browserHistory } from 'react-router';
 
 const Tutorials = () => (
   <Layout padded>
+    <div>
     <Header onClick={() => { browserHistory.push('/tutorials/basics')}}>
-      Basics- Thinking in Automate, States and Actions, Using the Dashboard
+      000: The Basics - Thinking in Automate, States and Actions, Using the Dashboard
     </Header>
     <Header>
-      Conditions and Rules
+      001: Grunt Work - Installation
     </Header>
     <Header>
-      Creating a Sequence
+      010: Add Some Logic - Conditions and Rules
     </Header>
     <Header>
-      Creating a Schedule
+      011: Making Things Happen in Order - Sequences and Schedules
     </Header>
     <Header>
-      Logging an Event, Email Alerts
+      100: Convenient Utilities - Logging an Event, Email Alerts
     </Header>
+    <Header>
+      101: Managing Multiple Systems - Databases
+    </Header>
+
+    </div>
   </Layout>
 );
 

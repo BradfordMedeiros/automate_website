@@ -52,14 +52,14 @@ const styles = {
     background: 'linear-gradient(rgb(20, 20, 20), rgb(16, 16, 16))',
     boxShadow: '0px 0px 10px 4px black inset',
     animation: 'fade_in 0.2s linear forwards',
-    overflow: 'hidden',
+    overflow: 'auto',
   }
 };
 
 
 
 const BasicLayout = ({ children, padded } ) => {
-  const injectStyle = { padding: 64, paddingTop: 0, marginBottom: 32 };
+  const injectStyle = { padding: 64, paddingTop: 0 };
   const childStyle = padded ? {...styles.childContainer, ...injectStyle} : styles.childContainer;
   return (
     <div style={{ width: '100vw', height: '100vh' }}>
