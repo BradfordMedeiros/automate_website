@@ -9,7 +9,7 @@ const Tutorials = () => (
     <Header onClick={() => { browserHistory.push('/tutorials/basics')}}>
       000: The Basics - Thinking in Automate, States and Actions, Using the Dashboard
     </Header>
-    <Header>
+    <Header onClick={() =>  { browserHistory.push('/tutorials/installation')}}>
       001: Grunt Work - Installation
     </Header>
     <Header>
