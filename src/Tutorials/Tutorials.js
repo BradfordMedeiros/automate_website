@@ -7,22 +7,25 @@ const Tutorials = () => (
   <Layout padded>
     <div>
     <Header onClick={() => { browserHistory.push('/tutorials/basics')}}>
-      000: The Basics - Thinking in Automate, States and Actions, Using the Dashboard
+      The Basics - Thinking in Automate
     </Header>
     <Header onClick={() =>  { browserHistory.push('/tutorials/installation')}}>
-      001: Grunt Work - Installation
+      Grunt Work - Installation
     </Header>
-    <Header>
-      010: Add Some Logic - Conditions and Rules
+    <Header onClick={() => { browserHistory.push('/tutorials/states_actions_dashboard')}}>
+      States and Actions, Using the Dashboard
     </Header>
-    <Header>
-      011: Making Things Happen in Order - Sequences and Schedules
+    <Header onClick={() => { browserHistory.push('/tutorials/conditions_and_rules')}}>
+      Add Some Logic - Conditions and Rules
     </Header>
-    <Header>
-      100: Convenient Utilities - Logging an Event, Email Alerts
+    <Header onClick={() => { browserHistory.push('/tutorials/sequences_and_schedules')}}>
+      Making Things Happen in Order - Sequences and Schedules
     </Header>
-    <Header>
-      101: Managing Multiple Systems - Databases
+    <Header onClick={() => { browserHistory.push("/tutorials/events")}}>
+      Convenient Utilities - Logging an Event, Email Alerts
+    </Header>
+      <Header onClick={() => { browserHistory.push("/tutorials/database_management")}}>
+      Managing Multiple Systems - Databases
     </Header>
 
     </div>

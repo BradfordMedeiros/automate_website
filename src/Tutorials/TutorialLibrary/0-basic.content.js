@@ -64,6 +64,9 @@ export default {
       'They are scripts that return true or false. They may access state information, or other information external to automate via http, or other method.'
     },
     {
+      type: 'space',
+    },
+    {
       type: 'section',
       content: 'Engines terminology'
     },
@@ -83,6 +86,9 @@ export default {
       type: 'definition',
       name: 'Schedules',
       content: 'Schedules are a background task that will trigger a mqtt message to be sent at a given time or occurence (daily, weekly, etc - cron specified)'
+    },
+    {
+      type: 'space',
     },
     {
       type: 'section',

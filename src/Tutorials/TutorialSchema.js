@@ -15,14 +15,13 @@ const styles = {
     fontSize: 18,
   },
   section: {
-    margin: '0px 48px 48px',
+    margin: '0px 48px 0px',
     paddingTop: 24,
-    paddingBottom: '24',
-    background: 'rgb(44, 43, 45)',
+    paddingBottom: 24,
+    background: 'rgb(31, 31, 31)',
     display: 'flex',
     justifyContent: 'center',
-    marginTop: 64,
-    marginBottom: 0,
+    border: '1px solid #3d3d3d',
   },
   overview: {
     color: 'rgb(253, 253, 253)',

@@ -7,7 +7,7 @@ const getStyle = clickable => ({
   fontFamily: 'Courier',
   boxShadow: '0px 0px 4px 1px black inset',
   padding: 48,
-  paddingBottom: 24,
+  paddingBottom: 48,
   border: '1px solid #373737',
   marginTop: 48,
   marginBottom: 0,
