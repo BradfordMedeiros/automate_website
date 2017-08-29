@@ -42,7 +42,7 @@ const GettingStarted = () => (
     </ol>
     Automate should be easier to use than hard coupling
     logic.  Automate should represent a recommended solution of the easiest way to get something to happen, while providing extra capabilities.
-    Production ready?  No reason you cannot use this in bigger systems, but I care about the electronic hobbiest.  This is for them.
+    Production ready?  No reason you cannot use this in bigger systems, but the focus is on the electronic hobbiest.  This is for them.
   </Layout>
 );
 

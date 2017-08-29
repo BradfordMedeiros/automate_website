@@ -1,6 +1,6 @@
 
 export default {
-  title: 'Tutorial 0: Thinking in Automate',
+  title: 'Tutorial 0: Thinking in automate',
   sections: [
 
     {
@@ -56,6 +56,20 @@ export default {
       content: 'Actions are values corresponding to MQTT topics that are meant to trigger actions in the system. ' +
       'For example, a motor might respond to the action actions/door/door_motor, and upon receiving the topic will open the door ' +
       'if the value is on, else close the door.'
+    },
+    {
+      type: 'definition',
+      name: 'StateScripts',
+      content: 'A StateScript is a user defined JavaScript script that is evaluated at a given rate an corresponds to a given topic.  For example, we may choose' +
+      ' to create a statescript configured at a rate evaluation of every 30s that polls an HTTP endpoint for information about a favorite video game k/d ratio stats, and then ' +
+      'publish that value to a path like states/games/halo/kill_death_ratio',
+    },
+    {
+      type: 'definition',
+      name: 'ActionScripts',
+      content: 'An ActionScript is a user defined JavaScript script that is called when a value is published to the value the script corresponds to (it subscribes to the topic).' +
+      '  For example, an ActionScript might be configured to the topic actions/slack/my_slack_channel/ , and when something publishes a value to that topic, the script' +
+      ' could be set up to post via the SLACK api to post a message to that channel with the given value.'
     },
     {
       type: 'definition',

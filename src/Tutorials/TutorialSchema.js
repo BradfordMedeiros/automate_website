@@ -41,6 +41,18 @@ const styles = {
     color: 'rgb(244, 247, 255)',
     padding: 48,
   },
+  concept: {
+    color: 'rgb(253, 253, 253)',
+    borderBottom: '1px solid rgb(71, 65, 65)',
+    fontSize: 16,
+    marginBottom: 12,
+    paddingBottom: 12,
+    background: '#386d98',
+    border: '1px solid orange',
+    padding: 48,
+    display: 'flex',
+    justifyContent: 'center',
+  },
   space: {
     margin: 124,
   }
@@ -57,18 +69,23 @@ const Basics = ({ content }) => {
           position: 'absolute',
           bottom: 0,
           boxShadow: 'black 0px 0px 8px 1px inset',
-          marginLeft: 64,
           marginRight: 64,
           marginBottom: 0,
           padding: 32,
+          width: 'calc(100vw - 128px)',
+
         }}>
           <div style={{fontSize: 22, margin: 28, marginTop: 32 }}>
             {content.sections.map(section => {
               if (section.type === 'header'){
                 return <Header>{section.content}</Header>
-              }else if (section.type === 'overview'){
+              }else if (section.type === 'overview') {
                 return <div style={styles.overview}>{section.content}</div>
-              }else if (section.type === 'section'){
+              }
+              else if (section.type === 'concept'){
+                return <div style={styles.concept}>{section.content}</div>
+              }
+              else if (section.type === 'section'){
                 return <div style={styles.section}>{section.content}</div>
               }else if (section.type ===  'definition'){
                 return <div style={styles.definition}>{section.name} - {section.content}</div>
@@ -83,7 +100,6 @@ const Basics = ({ content }) => {
                   </div>
                 );
               }
-
             })}
           </div>
         </div>

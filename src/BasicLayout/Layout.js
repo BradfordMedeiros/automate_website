@@ -45,7 +45,8 @@ const styles = {
     border: '1px solid rgba(0, 0, 0, 0.5)',
   },
   childContainer: {
-    width: '100%',
+    width: '100vw',
+    height: 'calc(100vh - 48px)',
     top: 48,
     bottom: 0,
     position: 'absolute',
