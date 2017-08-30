@@ -1,3 +1,4 @@
+import React from 'react';
 
 export default {
   title: 'Tutorial 6: Database Management',
@@ -9,11 +10,46 @@ export default {
     },
     {
       type: 'exposition',
-      content: 'This tutorial will teach you how to install automate',
+      content: (
+        <div>
+          This tutorial will teach you about the concept of database management, how to use it.
+          <br/><br/>
+          After this tutorial you will understand what database management is within the concept of
+          database management within automate.
+        </div>
+      ),
     },
 
     {
       type: 'space',
+    },
+    {
+      type: 'space',
+    },
+    {
+      type: 'overview',
+      content: 'Database Management - Conceptual',
+    },
+    {
+      type: 'exposition',
+      content:  (
+        <div>
+          What is database management all about?
+          <br /><br />
+          In automate, we save a variety of data.  For example, every single user-script such as StateScripts, ActionScripts,
+          and Conditions are saved to a database, as well as other configurations such as sequences, and so on. We also notably
+          save the last value of MQTT topics so we can view what topics are present in the system, as well as some other data.
+          <br/> <br/>
+          This means that anything you did to set up your system from the perspective of automate, will be saved to the automate
+          database.
+
+          <br /><br />
+          If you wish to be able to move settings from one automate system to another, create a backup of your database,
+          copy your existing database, or other operations, these mechanisms are provided for you.  In general I would recommend
+          backing up your database locally, since in the case of device failure, you will have a copy of your settings and backing up
+          to a seperate device so you will have a copy of your settings in the  case of device failure.
+        </div>
+      )
     },
     {
       type: 'overview',
@@ -21,7 +57,7 @@ export default {
     },
     {
       type: 'section',
-      content: 'Raspberry Pi Installation'
+      content: 'Creating, Deleting, Backing up Databases'
     },
     {
       type: 'definition',
@@ -29,78 +65,11 @@ export default {
       content: 'Click here to download a copy of the raspberry pi image',
     },
     {
-      type: 'definition',
-      name: 'Actions',
-      content: 'Actions are values corresponding to MQTT topics that are meant to trigger actions in the system. ' +
-      'For example, a motor might respond to the action actions/door/door_motor, and upon receiving the topic will open the door ' +
-      'if the value is on, else close the door.'
-    },
-    {
-      type: 'definition',
-      name: 'Conditions',
-      content: 'Conditions are small scripts defined in javascript, that are used elsewhere in the system. ' +
-      'They are scripts that return true or false. They may access state information, or other information external to automate via http, or other method.'
-    },
-    {
-      type: 'section',
-      content: 'Linux Installation'
-    },
-    {
-      type: 'definition',
-      name: 'Rules',
-      content: 'A Rule is a task which runs in the background at a given interval.  ' +
-      'A rule is bound to a single condition, and will trigger based upon the edge type. When a rule is true, it is configured to send a message to a given mqtt topic.'
-    },
-    {
-      type: 'definition',
-      name: 'Sequences',
-      content: 'Sequences are specific orders of mqtt topics to send, with specification of time. ' +
-      'Sequences can be triggered by sending a message to the mqtttopic associated with the sequence.'
-    },
-    {
-      type: 'definition',
-      name: 'Schedules',
-      content: 'Schedules are a background task that will trigger a mqtt message to be sent at a given time or occurence (daily, weekly, etc - cron specified)'
-    },
-    {
-      type: 'section',
-      content: 'Windows Installation'
-    },
-    {
-      type: 'definition',
-      name: 'Events',
-      content: 'Events are triggers by sending and mqtt topic to /event/(rest of event name) with a value that will be considered the message body. ' +
-      'These can be used to log significant events of interest in the system, which can trigger email alerts and serve as a general history.'
-    },
-    {
-      type: 'definition',
-      name: 'ProtoProgrammer',
-      content: 'Refers to specific hardware that can be used to easily read or output voltage from a circuit and translate it into an mqtt topic, no programming required.'
-    },
-    {
-      type: 'section',
-      content: 'Building from source'
-    },
-    {
-      type: 'definition',
-      name: 'Events',
-      content: 'Events are triggers by sending and mqtt topic to /event/(rest of event name) with a value that will be considered the message body. ' +
-      'These can be used to log significant events of interest in the system, which can trigger email alerts and serve as a general history.'
-    },
-    {
-      type: 'definition',
-      name: 'ProtoProgrammer',
-      content: 'Refers to specific hardware that can be used to easily read or output voltage from a circuit and translate it into an mqtt topic, no programming required.'
-    },
-    {
-      type: 'space',
-    },
-    {
       type: 'space',
     },
     {
       type: 'overview',
-      content: 'General Information on Installation'
+      content: 'General Information on Databases'
     },
     {
       type: 'iframe',

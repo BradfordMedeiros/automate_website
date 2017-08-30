@@ -39,6 +39,9 @@ export default {
       )
     },
     {
+      type: 'space',
+    },
+    {
       type: 'section',
       content: 'Logging an Event',
     },
