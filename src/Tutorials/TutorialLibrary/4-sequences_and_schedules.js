@@ -1,3 +1,4 @@
+import React from 'react';
 
 export default {
   title: 'Tutorial 4: Sequences and Schedules',
@@ -9,88 +10,88 @@ export default {
     },
     {
       type: 'exposition',
-      content: 'This tutorial will teach you how to install automate',
+      content: (
+        <div>
+          This tutorial will teach you about the concept of sequences and schedules, and how to use them.
+          <br/><br/>
+          After this tutorial you will be able to create a sequence such as specifying to turn on the light, and then to turn it off after
+          10s ( a sequence), or something like turn the light off each Monday at 3pm (a schedule).
+        </div>
+      ),
     },
+    {
+      type: 'space',
+    },
+    {
+      type: 'overview',
+      content: 'Sequences',
+    },
+    {
+      type: 'exposition',
+      content:  (
+        <div>
+          A sequence is something automate which allows the user to specify a sequence of MQTT topics
+          to publish to the system, and specifying timing between them.  This allows you to, provided endpoints
+          exist to support the functionality, send off a sequence of actions (or other topic) specifying to,
+          for example, open a door, turn off a light, and specify a time between the topics being sent.
+          <br /><br />
+          A sequence directly maps to a topic based on its naming.  All schedules are prefixed  with the topic level
+          path of /schedule/(rest of topic name).  When a value is published to the corresponding schedule topic,
+          the schedule will be executed.  This makes it compatibility with base MQTT functionality.
+        </div>
+      )
+    },
+    {
+      type: 'section',
+      content: 'Creating a sequence',
+    },
+    {
+      type: 'definition',
+      name: 'Step 1: Understanding the UI',
+      content: (
+        <div>
+          <div>To create a condition, simply up automate and navigate to the conditions tab</div>
+          <div>(add image here)</div>
+        </div>
+      ),
+    },
+    {
+      type: 'definition',
+      name: 'Step 2: Enter new code, and update',
+      content: 'Just like that, enter a value on the bar an press enter!'
+    },
+    {
+      type: 'space',
+    },
+    {
+      type: 'overview',
+      content: 'Schedules',
+    },
+    {
+      type: 'exposition',
+      content:  (
+        <div>
+         A schedule is a a user defined setting which the user specifies a timing for which a mqtt topic-value pair
+         to be published.   For example,  this allows us to publish an MQTT topic every Monday, or every day during
+         the month of January, and so on.
 
-    {
-      type: 'space',
-    },
-    {
-      type: 'overview',
-      content: 'Definitions',
-    },
-    {
-      type: 'section',
-      content: 'Raspberry Pi Installation'
-    },
-    {
-      type: 'definition',
-      name: 'Step 1',
-      content: 'Click here to download a copy of the raspberry pi image',
-    },
-    {
-      type: 'definition',
-      name: 'Actions',
-      content: 'Actions are values corresponding to MQTT topics that are meant to trigger actions in the system. ' +
-      'For example, a motor might respond to the action actions/door/door_motor, and upon receiving the topic will open the door ' +
-      'if the value is on, else close the door.'
-    },
-    {
-      type: 'definition',
-      name: 'Conditions',
-      content: 'Conditions are small scripts defined in javascript, that are used elsewhere in the system. ' +
-      'They are scripts that return true or false. They may access state information, or other information external to automate via http, or other method.'
+          <br/> <br />
+          Within the UI, the schedule roughly corresponds to a cron expression.  In general, the UI can be thought of
+          as a intersection of all the selected options.
+
+        </div>
+      )
     },
     {
       type: 'section',
-      content: 'Linux Installation'
+      content: 'Creating a schedule'
     },
     {
       type: 'definition',
-      name: 'Rules',
-      content: 'A Rule is a task which runs in the background at a given interval.  ' +
-      'A rule is bound to a single condition, and will trigger based upon the edge type. When a rule is true, it is configured to send a message to a given mqtt topic.'
-    },
-    {
-      type: 'definition',
-      name: 'Sequences',
-      content: 'Sequences are specific orders of mqtt topics to send, with specification of time. ' +
-      'Sequences can be triggered by sending a message to the mqtttopic associated with the sequence.'
-    },
-    {
-      type: 'definition',
-      name: 'Schedules',
-      content: 'Schedules are a background task that will trigger a mqtt message to be sent at a given time or occurence (daily, weekly, etc - cron specified)'
-    },
-    {
-      type: 'section',
-      content: 'Windows Installation'
-    },
-    {
-      type: 'definition',
-      name: 'Events',
-      content: 'Events are triggers by sending and mqtt topic to /event/(rest of event name) with a value that will be considered the message body. ' +
-      'These can be used to log significant events of interest in the system, which can trigger email alerts and serve as a general history.'
-    },
-    {
-      type: 'definition',
-      name: 'ProtoProgrammer',
-      content: 'Refers to specific hardware that can be used to easily read or output voltage from a circuit and translate it into an mqtt topic, no programming required.'
-    },
-    {
-      type: 'section',
-      content: 'Building from source'
-    },
-    {
-      type: 'definition',
-      name: 'Events',
-      content: 'Events are triggers by sending and mqtt topic to /event/(rest of event name) with a value that will be considered the message body. ' +
-      'These can be used to log significant events of interest in the system, which can trigger email alerts and serve as a general history.'
-    },
-    {
-      type: 'definition',
-      name: 'ProtoProgrammer',
-      content: 'Refers to specific hardware that can be used to easily read or output voltage from a circuit and translate it into an mqtt topic, no programming required.'
+      name: 'Step 1: Navigate to actions ui and publish an action, this should look familiar',
+      content: (
+        <div>need to add image</div>
+      )
     },
     {
       type: 'space',
@@ -100,7 +101,7 @@ export default {
     },
     {
       type: 'overview',
-      content: 'General Information on Installation'
+      content: 'Video tutorial of Sequences and Schedules'
     },
     {
       type: 'iframe',
