@@ -48,8 +48,15 @@ export default {
           copy your existing database, or other operations, these mechanisms are provided for you.  In general I would recommend
           backing up your database locally, since in the case of device failure, you will have a copy of your settings and backing up
           to a seperate device so you will have a copy of your settings in the  case of device failure.
+
+          <br /><br />
+          Generally database management is useful if you have a system you are heavily invested in for  data you do not
+          want to lose.  It is basically the equivalent of having multiple save files for your system.
         </div>
       )
+    },
+    {
+      type: 'space',
     },
     {
       type: 'overview',
